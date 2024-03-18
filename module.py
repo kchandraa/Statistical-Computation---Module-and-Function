@@ -15,3 +15,19 @@ def show_outlier(df, col_name):
     return df[(df[col_name] < lower_bound) | (df[col_name] > upper_bound)]
 
     
+def inradius(a,b,c):
+    """
+    This function takes three sides of a triangle and returns the inradius of the triangle.
+    """
+
+    s = (a+b+c)/2
+    return ((s*(s-a)*(s-b)*(s-c))**0.5)/s
+
+def outradius(a,b,c):
+    """
+    This function takes three sides of a triangle and returns the outradius of the triangle.
+    """
+
+    L = (s*(s-a)*(s-b)*(s-c))**0.5
+    return a*b*c/(4*L)
+    
