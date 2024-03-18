@@ -28,6 +28,7 @@ def outradius(a,b,c):
     This function takes three sides of a triangle and returns the outradius of the triangle.
     """
 
+    s = (a+b+c)/2
     L = (s*(s-a)*(s-b)*(s-c))**0.5
     return a*b*c/(4*L)
     
