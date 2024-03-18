@@ -1,4 +1,4 @@
-def show_outlier(df, col_name, threshold=3):
+def show_outlier(df, col_name):
     """
     This function takes a dataframe and a column name and returns the outliers data.
     
@@ -11,7 +11,7 @@ def show_outlier(df, col_name, threshold=3):
     iqr = q3 - q1
     lower_bound = q1 - (1.5)*iqr
     upper_bound = q3 + (1.5)*iqr
-    
+
     return df[(df[col_name] < lower_bound) | (df[col_name] > upper_bound)]
 
     
